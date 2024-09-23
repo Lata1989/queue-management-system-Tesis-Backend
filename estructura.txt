@@ -1,0 +1,35 @@
+queue-management-system/
+│
+├── src/                                # Carpeta principal del código fuente
+│   ├── config/                         # Configuración de entorno y conexión a la base de datos
+│   │   ├── envConfig.js                # Manejo de variables de entorno
+│   │   └── database.js                 # Conexión a MongoDB
+│   │
+│   ├── controllers/                    # Controladores que manejan la lógica de las colas
+│   │   ├── fifoController.js           # Controlador para la cola FIFO
+│   │   ├── lifoController.js           # Controlador para la cola LIFO
+│   │   ├── priorityController.js       # Controlador para colas por prioridad
+│   │   └── roundRobinController.js     # Controlador para la cola Round Robin
+│   │
+│   ├── models/                         # Modelos que representan las colas en MongoDB
+│   │   ├── fifoQueue.js                # Modelo para la cola FIFO
+│   │   ├── lifoQueue.js                # Modelo para la cola LIFO
+│   │   ├── priorityQueue.js            # Modelo para la cola por prioridad
+│   │   └── roundRobinQueue.js          # Modelo para la cola Round Robin
+│   │
+│   ├── routes/                         # Rutas de la API para las distintas colas
+│   │   ├── fifoRoutes.js               # Rutas para la cola FIFO
+│   │   ├── lifoRoutes.js               # Rutas para la cola LIFO
+│   │   ├── priorityRoutes.js           # Rutas para colas por prioridad
+│   │   └── roundRobinRoutes.js         # Rutas para la cola Round Robin
+│   │
+│   ├── services/                       # Lógica adicional o servicios (como WhatsApp API)
+│   │   └── whatsappService.js          # Servicio para integración con WhatsApp
+│   │
+│   ├── index.js                          # Configuración de la aplicación Express
+│   └── server.js                       # Inicialización del servidor
+│
+├── .env                                # Variables de entorno
+├── .gitignore                          # Archivos y carpetas a ignorar en Git
+├── package.json                        # Dependencias y scripts de NPM
+└── README.md                           # Documentación del proyecto
